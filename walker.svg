@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" width="64" height="80">
+  <!-- Shadow -->
+  <ellipse cx="32" cy="76" rx="18" ry="5" fill="rgba(0,0,0,0.35)"/>
+  <!-- Legs -->
+  <rect x="22" y="54" width="9" height="18" rx="3" fill="#2d6a2d"/>
+  <rect x="33" y="54" width="9" height="18" rx="3" fill="#2d6a2d"/>
+  <!-- Shoes -->
+  <ellipse cx="26" cy="72" rx="7" ry="4" fill="#1a1a0a"/>
+  <ellipse cx="37" cy="72" rx="7" ry="4" fill="#1a1a0a"/>
+  <!-- Body -->
+  <rect x="18" y="26" width="28" height="30" rx="5" fill="#4caf50"/>
+  <!-- Torn shirt detail -->
+  <polygon points="18,46 26,56 18,56" fill="#3a8f3a"/>
+  <polygon points="46,46 38,56 46,56" fill="#3a8f3a"/>
+  <!-- Arms (outstretched) -->
+  <rect x="2" y="28" width="18" height="9" rx="4" fill="#4caf50" transform="rotate(-15 11 32)"/>
+  <rect x="44" y="28" width="18" height="9" rx="4" fill="#4caf50" transform="rotate(15 53 32)"/>
+  <!-- Hands -->
+  <ellipse cx="5" cy="32" rx="5" ry="5" fill="#3a8f3a"/>
+  <ellipse cx="59" cy="32" rx="5" ry="5" fill="#3a8f3a"/>
+  <!-- Neck -->
+  <rect x="27" y="18" width="10" height="10" rx="3" fill="#4caf50"/>
+  <!-- Head -->
+  <ellipse cx="32" cy="14" rx="15" ry="16" fill="#4caf50"/>
+  <!-- Skull cracks -->
+  <path d="M24 8 Q26 12 24 16" stroke="#2a6a2a" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M38 6 Q37 11 39 14" stroke="#2a6a2a" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <!-- Eyes -->
+  <ellipse cx="26" cy="13" rx="4" ry="4.5" fill="#1a0000"/>
+  <ellipse cx="38" cy="13" rx="4" ry="4.5" fill="#1a0000"/>
+  <ellipse cx="26" cy="13" rx="2.5" ry="3" fill="#ffee58"/>
+  <ellipse cx="38" cy="13" rx="2.5" ry="3" fill="#ffee58"/>
+  <!-- Eye glow -->
+  <ellipse cx="26" cy="13" rx="1.5" ry="2" fill="#fff176" opacity="0.8"/>
+  <ellipse cx="38" cy="13" rx="1.5" ry="2" fill="#fff176" opacity="0.8"/>
+  <!-- Mouth / rotten teeth -->
+  <path d="M25 21 Q32 24 39 21" stroke="#1a0000" stroke-width="1.5" fill="none"/>
+  <rect x="29" y="21" width="3" height="3" fill="#e0e0e0" rx="0.5"/>
+  <rect x="33" y="21" width="2" height="2.5" fill="#e0e0e0" rx="0.5"/>
+</svg>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Zombie Smash: Nightfall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- LOADING SCREEN -->
+    <div id="screen-loading" class="screen active">
+      <div class="loading-content">
+        <div class="skull-icon">💀</div>
+        <h1 class="game-title-small">ZOMBIE SMASH</h1>
+        <div class="loading-bar-wrap"><div id="loading-bar" class="loading-bar"></div></div>
+        <p class="loading-text">Loading the nightmare...</p>
+      </div>
+    </div>
+
+    <!-- MAIN MENU -->
+    <div id="screen-menu" class="screen">
+      <div class="bg-canvas-wrap"><canvas id="bg-canvas"></canvas></div>
+      <div class="menu-content">
+        <div class="title-block">
+          <div class="title-eyebrow">💀 SURVIVE THE NIGHT 💀</div>
+          <h1 class="game-title">ZOMBIE<br>SMASH</h1>
+          <div class="title-sub">N I G H T F A L L</div>
+        </div>
+        <div class="menu-buttons">
+          <button class="btn btn-primary" id="btn-play">▶ PLAY</button>
+          <button class="btn btn-secondary" id="btn-instructions">HOW TO PLAY</button>
+          <button class="btn btn-secondary" id="btn-leaderboard">🏆 LEADERBOARD</button>
+          <button class="btn btn-secondary" id="btn-settings">⚙ SETTINGS</button>
+        </div>
+        <div class="mute-btn-wrap">
+          <button id="btn-mute-menu" class="mute-btn">🔊</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSTRUCTIONS -->
+    <div id="screen-instructions" class="screen overlay-screen">
+      <div class="overlay-panel">
+        <h2 class="overlay-title">HOW TO PLAY</h2>
+        <ul class="instructions-list">
+          <li>💀 Zombies appear from the edges</li>
+          <li>👆 Tap zombies before they reach you</li>
+          <li>⭐ Each zombie destroyed gives points</li>
+          <li>❤️ Don't let zombies reach the center</li>
+          <li>⚡ Collect powerups for advantages</li>
+          <li>🌊 Survive as long as possible</li>
+          <li>🏆 Beat your high score</li>
+        </ul>
+        <div class="zombie-types-mini">
+          <div class="zt"><span class="zt-icon" style="color:#4caf50">🧟</span><span>Walker<br><small>10pts</small></span></div>
+          <div class="zt"><span class="zt-icon" style="color:#2e7d32">🧟</span><span>Runner<br><small>20pts</small></span></div>
+          <div class="zt"><span class="zt-icon" style="color:#f44336">🧟</span><span>Tank<br><small>50pts</small></span></div>
+          <div class="zt"><span class="zt-icon" style="color:#9c27b0">👻</span><span>Ghost<br><small>40pts</small></span></div>
+          <div class="zt"><span class="zt-icon" style="color:#cddc39">☣</span><span>Toxic<br><small>60pts</small></span></div>
+        </div>
+        <button class="btn btn-secondary" id="btn-back-instructions">← BACK</button>
+      </div>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div id="screen-leaderboard" class="screen overlay-screen">
+      <div class="overlay-panel">
+        <h2 class="overlay-title">🏆 LEADERBOARD</h2>
+        <div id="leaderboard-list" class="leaderboard-list"></div>
+        <button class="btn btn-secondary" id="btn-back-leaderboard">← BACK</button>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="screen-settings" class="screen overlay-screen">
+      <div class="overlay-panel">
+        <h2 class="overlay-title">⚙ SETTINGS</h2>
+        <div class="settings-list">
+          <div class="setting-row">
+            <span>🎵 Music</span>
+            <button class="toggle-btn" id="toggle-music">ON</button>
+          </div>
+          <div class="setting-row">
+            <span>🔊 Sound Effects</span>
+            <button class="toggle-btn" id="toggle-sfx">ON</button>
+          </div>
+          <div class="setting-row">
+            <span>🏆 Reset High Score</span>
+            <button class="toggle-btn danger" id="btn-reset-score">RESET</button>
+          </div>
+        </div>
+        <button class="btn btn-secondary" id="btn-back-settings">← BACK</button>
+      </div>
+    </div>
+
+    <!-- GAME SCREEN -->
+    <div id="screen-game" class="screen">
+      <canvas id="game-canvas"></canvas>
+      <!-- HUD -->
+      <div id="hud">
+        <div id="hud-left">
+          <div class="hud-label">SCORE</div>
+          <div id="hud-score" class="hud-value">0</div>
+        </div>
+        <div id="hud-center">
+          <div id="combo-display" class="combo-display hidden"></div>
+          <div id="wave-announce" class="wave-announce hidden"></div>
+        </div>
+        <div id="hud-right">
+          <div class="hud-label">BEST</div>
+          <div id="hud-highscore" class="hud-value">0</div>
+          <div class="hud-label" style="margin-top:4px">WAVE</div>
+          <div id="hud-wave" class="hud-value">1</div>
+        </div>
+        <div id="hud-bottom">
+          <div class="hp-label">❤ HP</div>
+          <div class="hp-bar-wrap">
+            <div id="hp-bar" class="hp-bar"></div>
+          </div>
+          <div id="hp-value" class="hp-value">100</div>
+          <button id="btn-mute-game" class="mute-btn small">🔊</button>
+          <button id="btn-pause" class="mute-btn small">⏸</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAUSE OVERLAY -->
+    <div id="screen-pause" class="screen overlay-screen hidden-overlay">
+      <div class="overlay-panel small">
+        <h2 class="overlay-title">PAUSED</h2>
+        <button class="btn btn-primary" id="btn-resume">▶ RESUME</button>
+        <button class="btn btn-secondary" id="btn-menu-from-pause">MAIN MENU</button>
+      </div>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="screen-gameover" class="screen overlay-screen hidden-overlay">
+      <div class="overlay-panel">
+        <div class="gameover-skull">💀</div>
+        <h2 class="overlay-title red">GAME OVER</h2>
+        <div class="gameover-stats">
+          <div class="stat-row"><span>Final Score</span><span id="go-score">0</span></div>
+          <div class="stat-row"><span>Time Survived</span><span id="go-time">0s</span></div>
+          <div class="stat-row"><span>Highest Wave</span><span id="go-wave">1</span></div>
+          <div class="stat-row highlight"><span>Best Score</span><span id="go-best">0</span></div>
+        </div>
+        <div id="new-record-banner" class="new-record hidden">🏆 NEW RECORD!</div>
+        <button class="btn btn-primary" id="btn-play-again">▶ PLAY AGAIN</button>
+        <button class="btn btn-secondary" id="btn-main-menu">MAIN MENU</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

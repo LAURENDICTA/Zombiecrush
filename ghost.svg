@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 80" width="60" height="80">
+  <!-- Outer ethereal glow -->
+  <ellipse cx="30" cy="38" rx="28" ry="34" fill="#9c27b0" opacity="0.08"/>
+  <ellipse cx="30" cy="38" rx="22" ry="28" fill="#9c27b0" opacity="0.08"/>
+  <!-- Ghost body (wispy bottom) -->
+  <path d="M8 28 Q8 70 14 72 Q18 68 22 72 Q26 76 30 72 Q34 76 38 72 Q42 68 46 72 Q52 70 52 28 Q52 6 30 6 Q8 6 8 28Z" fill="#ce93d8" opacity="0.75"/>
+  <!-- Inner glow body -->
+  <path d="M14 28 Q14 62 18 64 Q22 60 26 64 Q30 68 34 64 Q38 60 42 64 Q46 62 46 28 Q46 12 30 12 Q14 12 14 28Z" fill="#e1bee7" opacity="0.4"/>
+  <!-- Chains -->
+  <circle cx="18" cy="50" r="2.5" fill="none" stroke="#7b1fa2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="18" cy="56" r="2.5" fill="none" stroke="#7b1fa2" stroke-width="1.5" opacity="0.6"/>
+  <line x1="18" y1="52.5" x2="18" y2="53.5" stroke="#7b1fa2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="42" cy="48" r="2.5" fill="none" stroke="#7b1fa2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="42" cy="54" r="2.5" fill="none" stroke="#7b1fa2" stroke-width="1.5" opacity="0.6"/>
+  <line x1="42" y1="50.5" x2="42" y2="51.5" stroke="#7b1fa2" stroke-width="1.5" opacity="0.6"/>
+  <!-- Arms (wispy) -->
+  <path d="M8 28 Q0 24 2 18 Q6 18 8 24" fill="#ce93d8" opacity="0.6"/>
+  <path d="M52 28 Q60 24 58 18 Q54 18 52 24" fill="#ce93d8" opacity="0.6"/>
+  <!-- Eye sockets -->
+  <ellipse cx="23" cy="27" rx="6" ry="7" fill="#1a0025" opacity="0.9"/>
+  <ellipse cx="37" cy="27" rx="6" ry="7" fill="#1a0025" opacity="0.9"/>
+  <!-- Glowing magenta eyes -->
+  <ellipse cx="23" cy="27" rx="4" ry="5" fill="#e040fb"/>
+  <ellipse cx="37" cy="27" rx="4" ry="5" fill="#e040fb"/>
+  <ellipse cx="23" cy="26" rx="2" ry="2.5" fill="#f8bbd0" opacity="0.9"/>
+  <ellipse cx="37" cy="26" rx="2" ry="2.5" fill="#f8bbd0" opacity="0.9"/>
+  <!-- Glow rings on eyes -->
+  <ellipse cx="23" cy="27" rx="6" ry="7" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.4"/>
+  <ellipse cx="37" cy="27" rx="6" ry="7" fill="none" stroke="#e040fb" stroke-width="1" opacity="0.4"/>
+  <!-- Mouth (wailing) -->
+  <path d="M22 38 Q30 44 38 38" stroke="#4a0060" stroke-width="2" fill="#1a0025" opacity="0.8"/>
+  <!-- Floating particles -->
+  <circle cx="14" cy="18" r="2" fill="#ce93d8" opacity="0.5"/>
+  <circle cx="46" cy="15" r="1.5" fill="#e040fb" opacity="0.4"/>
+  <circle cx="10" cy="42" r="1.5" fill="#ce93d8" opacity="0.35"/>
+  <circle cx="50" cy="44" r="1.5" fill="#ce93d8" opacity="0.35"/>
+</svg>
